@@ -11,13 +11,15 @@ let width= (context.canvas.width)-2*margin;
 let height= (context.canvas.height)-2*margin;
 
 
-drawRectangle(margin, margin, width/3, height/6, "#303D4E");
-drawRectangle(width-width/3+margin, margin, width/3, height/6, "#303D4E");
-drawRectangle(margin, margin+(height/6), width, height/3, "#D65745");
-drawRectangle(margin, 2*height/3, width/3, height/6,"#303D4E" );
-drawRectangle(width-width/3+margin,2*height/3,width/3, height/6, "#303D4E");
-drawRectangle(margin, height-height/6, width/3, height/3,"#5296D5");
-drawRectangle(width-width/3+margin, height-height/6,width/3, height/3,"#5296D5");
+drawRectangle(margin, margin, width/3, height/6, "#303d4e");
+drawRectangle(margin+width/3, margin, width/3, height/6, "#edf1f0");
+drawRectangle(width-width/3+margin, margin, width/3, height/6, "#303d4e");
+drawRectangle(margin, margin+(height/6), width, height/3, "#d65644");
+drawRectangle(margin, margin+height/2, width/3, height/6,"#303d4e" );
+drawRectangle(width-width/3+margin,margin+height/2,width/3, height/6, "#303d4e");
+drawRectangle(margin+width/3, margin+height/2, width/3, height/2, "#edf1f0");
+drawRectangle(margin, margin+(4*height/6), width/3, height/3,"#5396d4");
+drawRectangle(width-width/3+margin, margin+(4*height/6),width/3, height/3,"#5396d4");
 
 
 
