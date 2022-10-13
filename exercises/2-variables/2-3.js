@@ -6,15 +6,23 @@ let context = canvas.getContext("2d");
 
 
 
-let width= context.canvas.width;
-let height= context.canvas.height;
-let margin=50;
+let margin= (50);
+let width= (context.canvas.width)-2*margin;
+let height= (context.canvas.height)-2*margin;
 
-drawRectangles(width, height);
 
-function drawRectangles(width,height) {
-    context.beginPath();
-    context.moveTo(width+margin, height+margin);
-    context.rect(width+margin, height+margin, width/3, height/6);
-    context.stroke();
+drawRectangle(margin, margin, width/3, height/6, "#303D4E");
+drawRectangle(width-width/3+margin, margin, width/3, height/6, "#303D4E");
+drawRectangle(margin, margin+(height/6), width, height/3, "#D65745");
+drawRectangle(margin, 2*height/3, width/3, height/6,"#303D4E" );
+drawRectangle(width-width/3+margin,2*height/3,width/3, height/6, "#303D4E");
+drawRectangle(margin, height-height/6, width/3, height/3,"#5296D5");
+drawRectangle(width-width/3+margin, height-height/6,width/3, height/3,"#5296D5");
+
+
+
+function drawRectangle(x ,y, width, height, color) {
+   margin=50;
+   context.fillStyle = color;
+   context.fillRect (x, y, width, height, color);
 }

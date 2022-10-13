@@ -5,13 +5,10 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 let context = canvas.getContext("2d"); 
 
-
-
 let width= context.canvas.width;
 let height= context.canvas.height;
 let b;
 let color;
-
 
 drawSquares (50, 50, 400, 400);
 drawSquares (75, 75, 350, 350);
@@ -30,5 +27,3 @@ function drawSquares(x, y, width, height) {
     context.fillStyle = color;
     context.fillRect (x, y, width, height);
 }
-
-console.log(context.fillStyle= color);
