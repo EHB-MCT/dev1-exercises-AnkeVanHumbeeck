@@ -14,8 +14,8 @@ function draw() {
 
 function drawConcentricCircles() {
     let i = 0;
-    while (i<10) {
-        Utils.strokecircle(200, 200, 17*i);
+    while (i<11) {
+        Utils.strokecircle(200, 200, 15*i);
         i++;
     }
 }
