@@ -10,10 +10,10 @@ import context from "./context.js";
  * @param {number} r the radius od the circle
  */
 
-export function fillcircle(x, y, r) {
+export function strokecircle(x, y, r) {
     context.beginPath();
     context.arc(x, y, r, 0, Math.PI*2);
-    context.fill();
+    context.stroke();
 }
 
 export function drawLine (x1, y1, x2, y2) {

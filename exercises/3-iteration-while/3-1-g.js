@@ -13,13 +13,9 @@ function draw() {
 }
 
 function drawConcentricCircles() {
-    let i = ;
-    while () {
-        //This strokeCircle function does not exist yet!
-        //Add it to the utils script:
-        //The function draws the stroke of a circle 
-        //and has the following parameters: x,y,radius
-        Utils.strokeCircle(, , );
-        i = ;
+    let i = 0;
+    while (i<10) {
+        Utils.strokecircle(200, 200, 17*i);
+        i++;
     }
 }
