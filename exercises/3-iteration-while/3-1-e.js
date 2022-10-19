@@ -13,10 +13,20 @@ function draw() {
 }
 
 function drawDiagonalGrid() {
-    let i = ;
-    while (i <= ) {
-        Utils.drawLine(, , , );
-        Utils.drawLine(, , , );
-        i = ;
+    let i = 0;
+    while (i <= 6) {
+        Utils.drawLine(25*i+50, 25*i+200, 25*i+200, 25*i+50);
+        Utils.drawLine(25*i+50, 200-25*i, 25*i+200, 350-25*i);
+        i++;
     }
 }
+
+
+/*Utils.drawLine(50, 175, 225, 350);
+Utils.drawLine(75, 150, 250, 325);
+
+context.beginPath();
+context.strokeStyle= "black";
+context.moveTo (50, 175);
+context.lineTo (225, 350);
+context.stroke ();*/
