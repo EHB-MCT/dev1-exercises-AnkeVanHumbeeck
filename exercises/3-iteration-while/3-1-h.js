@@ -14,9 +14,9 @@ function draw() {
 
 function drawMoreConcentricCircles() {
     context.lineWidth = 2;
-    let i = 10;
+    let i = 15;
     while (i > 0) {
-        Utils.strokeCircle(200, 200, );
-        i = ;
+        Utils.strokecircle(200, 200, 15*i);
+        i--;
     }
 }
