@@ -27,3 +27,16 @@ export function rgb(r, g, b) {
     let rgb= "rgb(" + r + ","+ g + "," + b +")";
     return rgb;
 }
+
+/**
+ * fill a circle 
+ * @param {number} x x-coordinate of the center of the circle
+ * @param {number} y y-coordinate of the center of the circle
+ * @param {number} r the radius od the circle
+ */
+
+ export function fillcircle(x, y, r) {
+    context.beginPath();
+    context.arc(x, y, r, 0, Math.PI*2);
+    context.fill();
+}
