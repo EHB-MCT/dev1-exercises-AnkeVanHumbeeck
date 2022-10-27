@@ -28,6 +28,11 @@ export function rgb(r, g, b) {
     return rgb;
 }
 
+export function hsla(h, s, l, a) {
+    let hsla= "hsla("+ h + "," + s + "%," + l + "%," + a +")";
+    return hsla;
+}
+
 /**
  * fill a circle 
  * @param {number} x x-coordinate of the center of the circle
