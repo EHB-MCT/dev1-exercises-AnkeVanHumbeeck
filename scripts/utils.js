@@ -17,7 +17,7 @@ export function hsl(h, s, l) {
  * @param {number} a the alpha value (opacity) in percentage
  */
 export function hsla(h, s, l, a) {
-    return "hsl(" + h + "," + s + "%," + l + "%," + a + "%)";
+    return "hsl(" + h + "," + s + "%," + l + "%," + a + ")";
 }
 
 /** function that formats an rgb value based on parameters

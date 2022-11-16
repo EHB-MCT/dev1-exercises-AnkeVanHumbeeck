@@ -13,9 +13,10 @@ drawMaze();
 
 function drawMaze () {
     context.lineWidth=5;
+    context.strokeStyle="white";
     context.lineCap= "square";
-    for(let j=0; j<500; j++){
-        for (let i=0; i<500; i++) {
+    for(let j=0; j<200; j++){
+        for (let i=0; i<200; i++) {
             context.strokeStyle=Utils.hsl((Math.random()*360), 100, 50);
             let r=(Math.round(Math.random()));
             if (r==0) {
@@ -25,6 +26,5 @@ function drawMaze () {
             }
         }
     }
-    
 }
 

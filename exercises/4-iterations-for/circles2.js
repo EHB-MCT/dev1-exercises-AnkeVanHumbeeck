@@ -10,8 +10,8 @@ drawCirclesRandom ();
 function drawCirclesRandom() {
     for (let i=0; i<100; i++){
        for (let j=0; j<4; j++){
-            Utils.fillcircle(Math.random()*width, Math.random()*height, Math.random()*i);
-            context.fillStyle= Utils.hsla(195,100,50,0.3);
+            Utils.fillCircle(Math.random()*width, Math.random()*height, Math.random()*i);
+            context.fillStyle= Utils.hsla(195,50,50, 0.3);
         }
     }
 }

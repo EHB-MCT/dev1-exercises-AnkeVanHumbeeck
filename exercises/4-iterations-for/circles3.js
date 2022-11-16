@@ -14,8 +14,8 @@ drawdecreadingcircles ();
 function drawdecreadingcircles () {
     for (let i=0; i<11; i++) {
         for (let j=-1; j<10; j++) {
-            context.fillStyle=Utils.hsla(195, 100, 50, 0.3);
-            Utils.fillcircle (i*(width/9), j*(height/7), (j+1)*11);
+            context.fillStyle=Utils.hsl(195, 50, 50);
+            Utils.fillCircle (i*(width/9), j*(height/7), (j+1)*11);
             console.log(i);
             console.log(j);
         }
