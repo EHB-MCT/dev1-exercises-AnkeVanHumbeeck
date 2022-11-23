@@ -14,13 +14,12 @@ let yPos = 50;
 var speedX = 5;
 var speedY = 5;
 
-update();
 window.onclick = click;
+update();
 
 function update() {
 	/*if (click) {
-		context.fillStyle = "white";
-		context.fillRect(0, 0, width, height);
+		
 	} else {
 	}*/
 	context.fillStyle = "white";
@@ -51,11 +50,6 @@ function update() {
 		ismovingRight = !ismovingRight;
 	}
 }
-
-/**
- *
- * @param {MouseEvent} eventData
- */
 
 function click(eventData) {
 	let x = eventData.pageX;
