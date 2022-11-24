@@ -14,40 +14,43 @@ let yPos = 50;
 var speedX = 5;
 var speedY = 5;
 
+let gameover = false;
+if (click) {
+	gameover = true;
+}
+
 window.onclick = click;
 update();
 
 function update() {
-	/*if (click) {
-		
-	} else {
-	}*/
-	context.fillStyle = "white";
-	context.fillRect(0, 0, width, height);
+	if (gameover == false) {
+		context.fillStyle = "white";
+		context.fillRect(0, 0, width, height);
 
-	context.fillStyle = "blue";
-	Utils.fillCircle(xPos, yPos, 50);
+		context.fillStyle = "blue";
+		Utils.fillCircle(xPos, yPos, 50);
 
-	requestAnimationFrame(update);
+		requestAnimationFrame(update);
 
-	if (ismovingUp) {
-		yPos += speedY;
-	} else {
-		yPos -= speedY;
-	}
+		if (ismovingUp) {
+			yPos += speedY;
+		} else {
+			yPos -= speedY;
+		}
 
-	if (ismovingRight) {
-		xPos += speedX;
-	} else {
-		xPos -= speedX;
-	}
+		if (ismovingRight) {
+			xPos += speedX;
+		} else {
+			xPos -= speedX;
+		}
 
-	if (yPos >= height - 50 || yPos <= 50) {
-		ismovingUp = !ismovingUp;
-	}
+		if (yPos >= height - 50 || yPos <= 50) {
+			ismovingUp = !ismovingUp;
+		}
 
-	if (xPos >= width - 50 || xPos <= 50) {
-		ismovingRight = !ismovingRight;
+		if (xPos >= width - 50 || xPos <= 50) {
+			ismovingRight = !ismovingRight;
+		}
 	}
 }
 
@@ -60,6 +63,7 @@ function click(eventData) {
 		//sets speed to 0
 		speedX = 0;
 		speedY = 0;
+
 		//draws red circle, because of the clear canvas, not drawn
 		context.fillStyle = "red";
 		Utils.fillCircle(x, y, 50 / 3);
