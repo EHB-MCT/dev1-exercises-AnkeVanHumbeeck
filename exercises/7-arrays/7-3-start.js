@@ -9,9 +9,8 @@ let height = context.canvas.height;
 background();
 setup();
 draw();
-move();
 
-function move() {}
+let xPos = [0, 0, 0, 0, 0];
 
 function background() {
 	context.fillStyle = "gray";
@@ -29,11 +28,9 @@ function setup() {
 
 function draw() {
 	let space = height / 5;
-	drawSnail(space / 2, space / 2, space, 1);
-	drawSnail(space / 2, space * 1.5, space, 2);
-	drawSnail(space / 2, space * 2.5, space, 3);
-	drawSnail(space / 2, space * 3.5, space, 4);
-	drawSnail(space / 2, space * 4.5, space, 5);
+	for (let i = 0; i < xPos.length; i++) {
+		drawSnail(xPos[i], space * (i + 0.5), space, i + 1);
+	}
 }
 
 function drawSnail(x, y, sizeY, number) {
