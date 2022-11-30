@@ -14,43 +14,36 @@ let yPos = 50;
 var speedX = 5;
 var speedY = 5;
 
-let gameover = false;
-if (click) {
-	gameover = true;
-}
-
 window.onclick = click;
 update();
 
 function update() {
-	if (gameover == false) {
-		context.fillStyle = "white";
-		context.fillRect(0, 0, width, height);
+	context.fillStyle = "white";
+	context.fillRect(0, 0, width, height);
 
-		context.fillStyle = "blue";
-		Utils.fillCircle(xPos, yPos, 50);
+	context.fillStyle = "blue";
+	Utils.fillCircle(xPos, yPos, 50);
 
-		requestAnimationFrame(update);
+	requestAnimationFrame(update);
 
-		if (ismovingUp) {
-			yPos += speedY;
-		} else {
-			yPos -= speedY;
-		}
+	if (ismovingUp) {
+		yPos += speedY;
+	} else {
+		yPos -= speedY;
+	}
 
-		if (ismovingRight) {
-			xPos += speedX;
-		} else {
-			xPos -= speedX;
-		}
+	if (ismovingRight) {
+		xPos += speedX;
+	} else {
+		xPos -= speedX;
+	}
 
-		if (yPos >= height - 50 || yPos <= 50) {
-			ismovingUp = !ismovingUp;
-		}
+	if (yPos >= height - 50 || yPos <= 50) {
+		ismovingUp = !ismovingUp;
+	}
 
-		if (xPos >= width - 50 || xPos <= 50) {
-			ismovingRight = !ismovingRight;
-		}
+	if (xPos >= width - 50 || xPos <= 50) {
+		ismovingRight = !ismovingRight;
 	}
 }
 
