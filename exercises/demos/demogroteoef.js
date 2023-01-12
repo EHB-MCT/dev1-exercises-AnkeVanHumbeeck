@@ -9,24 +9,19 @@ let height = context.canvas.height;
 window.onmousemove = movePaddle;
 let balls = [];
 
-let Player1 = {
-	y: height / 2,
+let player1 = {
+	y: height - 100,
 	x: width / 2,
 	w: 200,
 };
-let Player2 = {
-	y: height / 2,
+let player2 = {
+	y: 75,
 	x: width / 2,
 	w: 200,
 };
 
 let score1 = 0;
 let score2 = 0;
-let xSpeed = 5;
-let ySpeed = 5;
-
-let playerX = width / 2 - 75;
-let player2X = width / 2 - 75;
 
 setup();
 draw();
@@ -53,35 +48,41 @@ function draw() {
 		Ball.y += Ball.ySpeed;
 
 		context.fillStyle = "white";
-		context.fillRect(playerX, height - 100, 150, 25);
-		player1x, player1y, player1.w;
-		context.fillRect(player2X, 75, 150, 25);
-		player2.Utils.fillCircle(x, y, 10);
+		context.fillRect(player1.x, player1.y, 150, 25);
+
+		context.fillRect(player2.x, player2.y, 150, 25);
+		Utils.fillCircle(Ball.x, Ball.y, 10);
 
 		if (Ball.y <= 0) {
 			score1++;
-			x = width / 2;
-			y = height / 2;
-			xSpeed = 5;
+			Ball.x = width / 2;
+			Ball.y = height / 2;
+			Ball.xSpeed = 5;
 		}
 
 		if (Ball.y >= height) {
 			score2++;
-			x = width / 2;
-			y = height / 2;
-			xSpeed = 5;
+			Ball.x = width / 2;
+			Ball.y = height / 2;
+			Ball.xSpeed = 5;
 		}
-		if (x >= width - 10 || x < 10) {
-			xSpeed *= -1;
+		if (Ball.y <= 0) {
+			score1++;
+			Ball.x = width / 2;
+			Ball.y = height / 2;
+			Ball.xSpeed = 5;
 		}
-		if (y >= height - 100) {
-			if (x >= playerX && x <= playerX + 150) {
-				ySpeed *= -1;
+		if (Ball.x >= width - 10 || Ball.x < 10) {
+			Ball.xSpeed *= -1;
+		}
+		if (Ball.y >= height - 100) {
+			if (Ball.x >= player1.x && Ball.x <= player1.x + 150) {
+				Ball.ySpeed *= -1;
 			}
 		}
-		if (y >= 100) {
-			if (x >= playerX && x <= playerX + 150) {
-				ySpeed *= -1;
+		if (Ball.y >= 100) {
+			if (Ball.x >= player1.x && Ball.x <= player1.x + 150) {
+				Ball.ySpeed *= -1;
 			}
 		}
 	}
@@ -109,5 +110,5 @@ function resetBall(bol) {
 }
 
 function movePaddle(e) {
-	playerX = e.pageX - 75;
+	player1.x = e.pageX - 75;
 }
